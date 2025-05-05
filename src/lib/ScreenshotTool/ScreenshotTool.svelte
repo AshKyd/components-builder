@@ -8,14 +8,12 @@
   const GENERATOR_URL = "https://fallback-automations-yknow.kyd.au/api";
   const GENERATOR_MAX_PARALLEL = 3;
   const GENERATOR_WIDTH = "1000";
-  const IFRAME_URL =
-    window.location.origin +
-    window.location.pathname.replace("/builder/", "/iframe/");
 
   let {
     defaultMarkerName = () => "Marker",
     prefixes = {},
     parseMarker = (str) => ({}),
+    iframeUrl = "",
   } = $props();
 
   // closed => pasting => preview => generate => done
@@ -89,11 +87,11 @@
       preview,
       GENERATOR_MAX_PARALLEL,
       async ({ markerString }, callback) => {
-        const iframeUrl = IFRAME_URL + markerString;
+        const thisIframeUrl = iframeUrl + markerString;
         const generatorUrl = [
           GENERATOR_URL,
           new URLSearchParams({
-            url: iframeUrl,
+            url: thisIframeUrl,
             selector: `.iframe-mount > *`,
             width: GENERATOR_WIDTH,
           }).toString(),
@@ -102,7 +100,7 @@
         let blob;
         // retry. It fails sometimes.
         for (let retry = 0; retry < 5; retry++) {
-          console.log(iframeUrl, "attempt ", retry);
+          console.log(thisIframeUrl, "attempt ", retry);
           blob = await doFetch(generatorUrl);
           if (!blob) {
             await sleep(1000 * 2 * retry);
