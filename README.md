@@ -2,9 +2,13 @@
 
 A set of common styles and components for creating builders - tools to configure and preview visualisations with a GUI interface.
 
+**These components are not thoroughly tested as a library, and are provided as-is. Please contribute pull requests to fix issues**
+
 ## Global Styles (BuilderStyleRoot)
 
-This project uses global styles in the same way as bootstrap or tailwind. These styles mainly focus on form elements and things you'll likely to hit in a builder. Wrap your application inside of the BuilderStyleRoot component to make use of these styles. Note that all the components in this repository also depend on these Styles.
+This project uses global styles in the same way as bootstrap or tailwind. These styles mainly focus on form elements and things you'll likely to hit in a builder.
+
+Wrap your application inside of the BuilderStyleRoot component to make use of these styles. Note that all the components in this repository also depend on these styles.
 
 ## UpdateChecker
 
