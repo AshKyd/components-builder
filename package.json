@@ -1,5 +1,5 @@
 {
-  "name": "components-builder",
+  "name": "@abcnews/components-builder",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite dev",
