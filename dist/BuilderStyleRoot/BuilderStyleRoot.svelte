@@ -5,6 +5,7 @@
 <div class="builder-style-root">
   {@render children?.()}
 </div>
+
 <svelte:head>
   <style>
     .builder-style-root {
@@ -28,9 +29,6 @@
       -webkit-text-size-adjust: 100%;
 
       color-scheme: dark light;
-      :global(*) {
-        box-sizing: border-box;
-      }
     }
 
     @media (prefers-color-scheme: dark) {
@@ -44,7 +42,10 @@
     }
 
     /* // builder-style-root */
-    .builder-style-root :global {
+    .builder-style-root {
+      * {
+        box-sizing: border-box;
+      }
       fieldset {
         margin-bottom: 1rem;
         padding: var(--padding);

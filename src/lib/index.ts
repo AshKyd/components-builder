@@ -1,5 +1,5 @@
 // Reexport your entry components here
-// export { default as BuilderStyleRoot } from "./BuilderStyleRoot/BuilderStyleRoot.svelte";
+export { default as BuilderStyleRoot } from "./BuilderStyleRoot/BuilderStyleRoot.svelte";
 export { default as ContextMenu } from "./ContextMenu/ContextMenu.svelte";
 export { default as GoogleDocScrollyteller } from "./GoogleDocScrollyteller/GoogleDocScrollyteller.svelte";
 export { default as Modal } from "./Modal/Modal.svelte";
