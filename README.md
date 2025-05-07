@@ -10,6 +10,31 @@ This project uses global styles in the same way as bootstrap or tailwind. These 
 
 Wrap your application inside of the BuilderStyleRoot component to make use of these styles. Note that all the components in this repository also depend on these styles.
 
+## BuilderFrame
+
+A two column frame you can use to scaffold your builder.
+
+```svelte
+<script lang="ts">
+  import { BuilderFrame } from '@abcnews/components-builder';
+</script>
+
+{#snippet Viz()}
+  <svg …>
+{/snippet}
+
+{#snippet Sidebar()}
+  <fieldset>
+    <legend>My builder</legend>
+  </fieldset>
+{/snippet}
+
+<BuilderStyleRoot>
+  <BuilderFrame {Viz} {Sidebar} />
+</BuilderStyleRoot>
+
+```
+
 ## UpdateChecker
 
 The update checker extracts the current version number from the URL, and recursively checks for new versions, major, minor, and patch. If a new version is found it will show a modal prompting the user to update.
