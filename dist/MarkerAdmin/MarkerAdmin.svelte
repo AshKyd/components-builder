@@ -5,7 +5,7 @@
   let {
     /** Unique project name used in localStorage (e.g. "elections-federal2025-lower-house")*/
     projectName = "dev",
-    defaultName = () => "",
+    defaultMarkerName = () => "",
     prefixes = {
       "Scrolly mark": "#mark",
       "Scrolly opener": "#scrollytellerNAMEscrolly1",
@@ -265,7 +265,7 @@
       e.preventDefault();
       const name = prompt(
         "What would you like to call this snapshot?",
-        defaultName(),
+        defaultMarkerName(),
       );
       if (!name) {
         return;

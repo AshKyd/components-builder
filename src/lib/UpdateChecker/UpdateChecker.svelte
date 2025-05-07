@@ -10,9 +10,9 @@
   let {
     overrideNewVersion,
     buttonText = "Open new builder",
-  }: { overrideNewVersion: NewVersion; buttonText: string } = $props();
+  }: { overrideNewVersion?: NewVersion; buttonText?: string } = $props();
 
-  let newVersion = $state<NewVersion>(overrideNewVersion);
+  let newVersion = $state<NewVersion | undefined>(overrideNewVersion);
   // svelte-ignore state_referenced_locally
   let isOpen = $state(!!newVersion);
 

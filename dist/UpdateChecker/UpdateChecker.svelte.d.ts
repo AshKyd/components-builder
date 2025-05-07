@@ -3,8 +3,8 @@ type NewVersion = {
     thisVersion: string;
 };
 type $$ComponentProps = {
-    overrideNewVersion: NewVersion;
-    buttonText: string;
+    overrideNewVersion?: NewVersion;
+    buttonText?: string;
 };
 declare const UpdateChecker: import("svelte").Component<$$ComponentProps, {}, "">;
 type UpdateChecker = ReturnType<typeof UpdateChecker>;
