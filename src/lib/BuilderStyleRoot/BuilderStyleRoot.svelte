@@ -73,17 +73,16 @@
           font-weight: bold;
         }
       }
+      .btn-group {
+        display: flex;
+        gap: 0.25rem;
+        flex-wrap: wrap;
+      }
 
       .builder__inline {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
-      }
-
-      .buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2px;
       }
 
       label {
@@ -171,6 +170,11 @@
         th:first-child {
           border-left: none;
         }
+      }
+
+      .builder__digit {
+        text-align: right;
+        font-family: monospace;
       }
     }
   </style>
