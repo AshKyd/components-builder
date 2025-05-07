@@ -11,10 +11,16 @@
     name = "myscrollyteller",
     markerName = "mark",
     ScrollytellerRoot,
+    loadScrollyteller,
   }: {
     name: string;
     markerName: string;
     ScrollytellerRoot: Component;
+    loadScrollyteller: (
+      name?: string,
+      className?: string,
+      markerName?: string,
+    ) => any;
   } = $props();
 
   const localStorageKey = `ABC_NEWS_BUILDER_GDOC_PREVIEW`;
@@ -63,6 +69,7 @@
       name,
       url: doc,
       markerName,
+      loadScrollyteller,
     })
       .then((data) => {
         title = data.title;

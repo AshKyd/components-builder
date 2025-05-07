@@ -20,5 +20,6 @@
   args={{
     name: "myscrollyteller",
     markerName: "mark",
+    loadScrollyteller: () => ({}),
   }}
 />
