@@ -1,7 +1,7 @@
 import type { Component } from "svelte";
 type $$ComponentProps = {
     name: string;
-    markerName: string;
+    markerName?: string;
     ScrollytellerRoot: Component;
     loadScrollyteller: (name?: string, className?: string, markerName?: string) => any;
 };

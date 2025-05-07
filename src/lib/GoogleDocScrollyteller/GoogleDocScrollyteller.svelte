@@ -14,7 +14,7 @@
     loadScrollyteller,
   }: {
     name: string;
-    markerName: string;
+    markerName?: string;
     ScrollytellerRoot: Component;
     loadScrollyteller: (
       name?: string,
