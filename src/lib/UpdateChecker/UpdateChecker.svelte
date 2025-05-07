@@ -13,6 +13,7 @@
   }: { overrideNewVersion: NewVersion; buttonText: string } = $props();
 
   let newVersion = $state<NewVersion>(overrideNewVersion);
+  // svelte-ignore state_referenced_locally
   let isOpen = $state(!!newVersion);
 
   /**
