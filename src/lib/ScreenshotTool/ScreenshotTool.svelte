@@ -12,7 +12,8 @@
   let {
     defaultMarkerName = () => "Marker",
     prefixes = {},
-    parseMarker = (str) => ({}),
+    // Optional function to process markers
+    onMarker = (str) => str,
     iframeUrl = "",
   } = $props();
 
@@ -46,11 +47,8 @@
 
       const uniqueMarkers = Array.from(new Set(markers));
 
-      // parse to object
-      const encodedMarkers = uniqueMarkers.map((marker) => parse(marker));
-
       // pass through schema
-      const parsedMarkers = await Promise.all(encodedMarkers.map(parseMarker));
+      const parsedMarkers = await Promise.all(uniqueMarkers.map(onMarker));
 
       // generate a friendly name &  reencode markers with hexFlip="none"
       preview = await Promise.all(

@@ -6,12 +6,12 @@ type ScreenshotTool = {
 declare const ScreenshotTool: import("svelte").Component<{
     defaultMarkerName?: Function;
     prefixes?: Record<string, any>;
-    parseMarker?: Function;
+    onMarker?: Function;
     iframeUrl?: string;
 }, {}, "">;
 type $$ComponentProps = {
     defaultMarkerName?: Function;
     prefixes?: Record<string, any>;
-    parseMarker?: Function;
+    onMarker?: Function;
     iframeUrl?: string;
 };
