@@ -390,7 +390,7 @@
       & > * {
         padding: 0.5rem;
       }
-      &:not(&--deleted):hover {
+      &:not(.row--deleted):hover {
         cursor: pointer;
         background: Highlight;
         color: HighlightText;
