@@ -16,6 +16,8 @@
     position: absolute;
     left: 0;
     top: 0;
+    background: var(--background);
+    color: var(--text);
   }
   .builder-frame__viz {
     flex: 1;
@@ -31,7 +33,7 @@
   .builder-frame__sidebar {
     width: 22rem;
     padding: 2rem 1rem;
-    background: rgba(0, 0, 0, 0.04);
+    background: rgba(128, 128, 128, 0.05);
     border-left: 1px solid var(--border);
     height: 100vh;
     overflow: auto;

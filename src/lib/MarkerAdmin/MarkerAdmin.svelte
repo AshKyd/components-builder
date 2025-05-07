@@ -314,7 +314,7 @@
             </a>
           {/if}
         </td>
-        <td class="buttons">
+        <td class="btn-group">
           <button
             onclick={(e) => {
               e.preventDefault();
